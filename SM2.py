@@ -126,7 +126,7 @@ class SM2(object):
             p3[1] = ((l10 * l6 - l8 * ll3 % p) // 2) % p
             return p3
 
-    def pre_process(self,w):
+    def pre_process(self, w):
         p1=(self.G[0],self.G[1],1)
         self.G_list.append(p1)
         p2 = self.add_Jacobian(p1, p1)
