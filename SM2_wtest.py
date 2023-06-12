@@ -29,7 +29,8 @@ def main():
         end = perf_counter()
         norm = end - start
         print(f"优化前运行时间：%lf秒" % norm)
-        sm2.pre_process(G, w)  # 预处理
+        sm2.G_list=[]   # 重置一下预处理结果
+        sm2.pre_process(w)  # 预处理
         start = perf_counter()
         for i in range(N):
             tmp = sm2.mul_optimizer(k, G, w, 1)  # 使用优化后的乘法

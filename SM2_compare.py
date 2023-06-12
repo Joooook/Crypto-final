@@ -29,7 +29,7 @@ def main():
     print("结果：", tmp)
     print(f"运行时间：%lf秒" % norm)
     print('————————优化后————————')
-    sm2.pre_process(G, w)  # 预处理
+    sm2.pre_process(w)  # 预处理
     print(f"滑动窗口大小为：%d" % w)
     start = perf_counter()
     for i in range(N):
